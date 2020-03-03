@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <script src ="p5.min.js"></script>
+    </head>
+    <body>
+        <script>
+        var w = window.innerWidth;
+        var h = window.innerHeight;
+        var playerX = w/2;
+        var playerY = h/2;
+        function setup() {
+            createCanvas(w,h);
+        }
+        function draw() {
+            clear();
+            //Create player
+            rect(playerX, playerY, 50, 50);
+            fill("red");
+            //move the player up, when W key is down
+            if (playerX < w) {
+            if (keyIsDown(87)) {
+            playerY-=5;
+            }
+            //move player down, when the S key is down
+            else if (keyIsDown(83)) {
+                playerY+=5;
+            }
+            else if (keyIsDown(65)) {
+                playerX-=5;
+            }
+            else if (keyIsDown(68)) {
+                playerX+=5;
+            }
+            }
+           
+        }
+        </script>
+    </body>
+</html>

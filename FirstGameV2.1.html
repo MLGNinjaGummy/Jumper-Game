@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script src ="FirstGameV2.1.js"></script>
+        <script src ="p5.min.js"></script>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+        var jumper  = new jumper(); // declare object constructor
+        var w = window.innerWidth;
+        var h = window.innerHeight;
+        function setup() {
+            createCanvas(w,h);
+        }
+        function draw() {
+            clear(); // clear canvas
+            jumper.show(); //load shpw
+            jumper.update();
+        }
+        function keyPressed() {
+            if (keyCode === 32) {
+                jumper.up();
+            }
+        }
+        </script>
+    </body>
+</html>

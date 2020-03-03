@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <style>
+        </style>
+        <script src ="p5.min.js"></script>
+    </head>
+    <body>
+        <script>
+        var w = window.innerWidth;
+        var h = window.innerHeight;
+        var playerX = w/2;
+        var playerY = h/2;
+        function setup() {
+            createCanvas(w,h);
+        }
+        function draw() {
+            clear();
+            rect(playerX, playerY, 50, 50);
+            fill("red");
+            if (playerX + 10> w) {
+                (keyIsDown(65))
+                playerX-=5;
+            }
+            else if (playerX < 0) {
+                (keyIsDown(68))
+                playerX+=5; 
+            }
+            else if (playerY + 50 > h) {
+                (keyIsDown(65)) 
+                playerY-=5;
+            }
+            else if (playerY < 0) {
+                (keyIsDown(87))
+                playerY+=5;
+            }
+            else {
+                if (keyIsDown(87)) {
+                playerY-=5;
+                }
+                else if (keyIsDown(83)) {
+                playerY+=5;
+                 }
+                else if (keyIsDown(65)) {
+                playerX-=5;
+                }
+                 else if (keyIsDown(68)) {
+                playerX+=5;
+                }
+            }
+        }
+        </script>
+    </body>
+</html>
